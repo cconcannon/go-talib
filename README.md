@@ -1,43 +1,24 @@
 # go-talib
 
-[![GoDoc](http://godoc.org/github.com/markcheno/go-talib?status.svg)](http://godoc.org/github.com/markcheno/go-talib) 
-
 A pure [Go](http://golang.org/) port of [TA-Lib](http://ta-lib.org)
+
+Forked from [markcheno/go-talib](https://github.com/markcheno/go-talib), which has not been maintained since March 2019. Updated with a `go.mod` file and `v1.0.0` tag for ease-of-use with Go Modules. 
 
 ## Install
 
 Install the package with:
 
 ```bash
-go get github.com/markcheno/go-talib
+go get github.com/cconcannon/go-talib
 ```
 
 Import it with:
 
 ```go
-import "github.com/markcheno/go-talib"
+import "github.com/cconcannon/go-talib"
 ```
 
 and use `talib` as the package name inside the code.
-
-## Example
-
-```go
-package main
-
-import (
-	"fmt"
-	"github.com/markcheno/go-quote"
-	"github.com/markcheno/go-talib"
-)
-
-func main() {
-	spy, _ := quote.NewQuoteFromYahoo("spy", "2016-01-01", "2016-04-01", quote.Daily, true)
-	fmt.Print(spy.CSV())
-	rsi2 := talib.Rsi(spy.Close, 2)
-	fmt.Println(rsi2)
-}
-```
 
 ## License
 
